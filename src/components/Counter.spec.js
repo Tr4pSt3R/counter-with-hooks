@@ -12,4 +12,15 @@ describe('<Counter />', () => {
 
     expect(countVal.text()).toEqual('0');
   });
+
+  it('should increment by one when I click on increment button', () => {
+    const wrapper = shallow(<Counter/>);
+    const incrementBtn = wrapper.find('button.incrementBtn');
+
+    incrementBtn.simulate('click');
+
+    const countVal = wrapper.find('.counter-value');
+
+    expect(countVal.text()).toEqual('1');
+  });
 });
