@@ -23,4 +23,13 @@ describe('<Counter />', () => {
 
     expect(countVal.text()).toEqual('1');
   });
+
+  it('should decrement by one when I click on the decrement button', () => {
+    const wrapper = shallow(<Counter/>);
+    wrapper.find('button.decrementBtn').simulate('click');
+
+    const countVal = wrapper.find('.counter-value');
+
+    expect(countVal.text()).toEqual('-1');
+  });
 });

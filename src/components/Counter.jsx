@@ -7,6 +7,7 @@ const Counter = () => {
     <div>
       <span className='counter-value'>{count}</span>
       <button className='incrementBtn' onClick={ () => { setCount(count + 1) } }>+</button>
+      <button className='decrementBtn' onClick={() => { setCount(count - 1) }}>-</button>
     </div>
   )
 };
